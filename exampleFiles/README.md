@@ -318,14 +318,6 @@ Remove your node_modules, clean your npm cache, and reinstall
 
 `rm -rf node_modules && npm cache clean --force && npm install`
 
-### Storyshots
-
-For each story defined in storybook we automatically create two forms of storyshots (see stories/storyshots.test.js) - regular storyshots and image storyshots.
-
-[Regular storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots/storyshots-core) are created with Jest snapshots - just like the ones you see used in unit tests throughout the rest of our app.
-
-[Image storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots/storyshots-puppeteer) are created with Jest image snapshots which generates and compares screenshots of each story.
-
 ## Recommended Chrome Extensions
 
 * [Web Developer Form Filler](https://chrome.google.com/webstore/detail/web-developer-form-filler/gbagmkohmhcjgbepncmehejaljoclpil)
