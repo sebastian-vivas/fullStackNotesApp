@@ -34,8 +34,6 @@ Follow these instructions in order to setup the NodeJS environment for RefreshUI
 * Container components connect directly to the store and subscribe only to the state they need.
 * State is immutable.
 
-![Core principles of Redux](https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/introduction-to-redux-advanced-react-part-one/Images/image004.jpg)
-
 ### Redux flow
 
 * The application (i.e. React) triggers an action of a given type passing along new state in the form of a payload object.
@@ -45,8 +43,6 @@ Follow these instructions in order to setup the NodeJS environment for RefreshUI
 * The application waits for the next action.
 
 > For brevity, Redux framework internals (such as middleware and hot reducer replacement) have been omitted from the flow diagram.
-
-![Redux flow](https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/introduction-to-redux-advanced-react-part-one/Images/image005.jpg)
 
 #### What is an action?
 
@@ -291,51 +287,6 @@ WEB APP B
 * qa - deployed QA tier
 * uat - deployed UAT tier
 * production - deployed Production tier
-
-## Partner Data
-
-Upon `npm run build:one`, we suppose there will be partner data for us in the `partnerJson/` directory. We will use this data as part of our static build of the application. We build for a specific product and experience id given by the environment variables BUILD_PRODUCT and BUILD_EXPID. Using `npm run build` will iterate through all of the builds specified in the `scripts/builds-{NODE_ENV}.js` file, running `npm run build:one` for each.
-
-There are sample partner data files in the `partnerSample/` directory. You can `cp -av partnerSample/ partnerJson/` to simulate the build process found on the remote server (which normally provides this directory and it's contents for us). Alternatively, you can set `PARTNER_SOURCE` to `placeholder` and use placeholder data, which is how the `npm start` command works.
-
-Here are some examples of how the application can be ran/built\*:
-
-1. `npm start`
-    * dev mode, this will use the placeholder partner data
-1. `NODE_ENV=qa npm build:one && NODE_ENV=qa npm serve`
-    * will build and serve the app for qa using the partner data found in `partnerJson/`
-1. `PARTNER_SOURCE=service npm start`
-    * will use data found in `partnerJson/` and start the app in dev mode
-1. add a fake partnerData.js to `public/client/` and run `PARTNER_SOURCE=service npm start`
-    * will run the app in dev mode with the fake partner data (useful if you don't have access to the partner-svc)
-
->Note: all of these commands need a BUILD_EXPID and BUILD_PRODUCT specified, except `npm serve`, the default BUILD_EXPID and BUILD_PRODUCT have been set in .env.development, but are not set for other environments.
-
-## Product specific changes
-
-Below are some examples of approaches you should take when introducing product specific changes based on the size of the change.
-
-### Small
-
-e.g. A product specific loader image for the PaymentDetails page
-
-Define slots in container components whose contents are passed down via props from the App level. Note, the use of `import resources from 'resources';` should be reserved for images and simple copy (usually experience specific).
-
-### Medium
-
-e.g. The coverage page can vary greatly between products so it'd be best to create a specialized coverage container for each product.
-
-Create a product specific copy of the container component. Refactoring of existing container component may need to be considered if its contents can better be decomposed into smaller components which can then be reused.
-
-### Large
-
-e.g. Different flow through the application
-
-New container components should be created for new pages and changes in flow should be made at the "App" level.
-
-## Experience specific changes
-
-Experience specific images and copy that will persist across all products should be replaced in a resources file. (e.g. header logo in client/resources/Example.js)
 
 ## Common errors
 
