@@ -37,7 +37,6 @@ Follow these instructions in order to setup the React environment for the Notes 
 * [npm](https://www.npmjs.com/) - JS package management
 * [React](https://reactjs.org/) - Used to build UI
 * [Built-in React Hooks](https://react.dev/reference/react/hooks) - State/Navigation management
-* [Chai](https://www.chaijs.com/) - Assertion library for unit testing
 * [Jest](https://jestjs.io/) - JavaScript Testing Framework
 * [Express](https://expressjs.com/) - Node.js Web Application Framework
 * [MongoDB](https://www.mongodb.com/) - Non-relational Database
