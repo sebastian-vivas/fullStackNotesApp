@@ -14,7 +14,7 @@ Follow these instructions in order to setup the NodeJS environment for the Notes
 
 Follow these instructions in order to setup the React environment for the Notes App.
 
-1. First, open the repository folder directory in the terminal and enter `cd client`. Once you are inside the client directory, enter `npm install` (or `npm i`) to install all of the project dependencies.
+1. First, open the repository folder directory in the terminal and enter `cd client`. Once you are inside the client directory, enter `npm install` or `npm i` to install all of the project dependencies.
 2. To run the React application, inside the client directory in the terminal, enter `npm run dev`. This will run the application locally on your machine on port 3000 (localhost:3000).
 3. Finally, open a web browser of your choice and enter localhost:3000 to navigate to the application's landing page.
 
