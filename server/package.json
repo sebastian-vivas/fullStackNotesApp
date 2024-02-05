@@ -2,17 +2,27 @@
   "name": "node",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.mjs",
+  "type": "module",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "mocha tests/**/*.test.js"
   },
   "author": "BEST GROUP THINGS",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
-    "mongodb": "^6.3.0",
+    "mongodb": "3.6",
     "mongoose": "^8.1.1",
     "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "chai": "^5.0.3",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.4"
   }
 }
