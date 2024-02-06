@@ -8,7 +8,7 @@ Follow these instructions in order to setup the NodeJS environment for the Notes
 2. Next, you'll want to install NPM. Simply open your terminal and enter `npm install -g npm` to install npm globally on your machine. You can learn more about NPM [here](https://docs.npmjs.com/about-npm).
 3. Run `node --version` or `node -v` and `npm --version` or `npm -v` in your console to make sure that NodeJS and NPM have been properly installed on your system. You should see the same version number in your console that was listed on the LTS download button.
 4. Lastly, open the repository folder directory in the terminal and enter `cd server`. Once you are inside the server directory, enter `npm install` or `npm i` to install all of the project dependencies.
-5. To run the node server in this application, inside the server directory in  the terminal, enter `node server.js`. This will run the server locally on your machine on port 8080 (localhost:8080).
+5. To run the node server in this application, inside the server directory in  the terminal, enter `node server.mjs`. This will run the server locally on your machine on port 8080 (localhost:8080).
 
 ## Setting up React in the application
 
@@ -18,14 +18,19 @@ Follow these instructions in order to setup the React environment for the Notes 
 2. To run the React application, inside the client directory in the terminal, enter `npm run dev`. This will run the application locally on your machine on port 3000 (localhost:3000).
 3. Finally, open a web browser of your choice and enter localhost:3000 to navigate to the application's landing page.
 
-## Running tests
+## Running tests in the Server
 
 * `npm test` -> Runs all the unit tests.
-* `npm test:verbose:watch` -> Runs all the unit tests interactively and spits out more details about errors.
+
+## Running tests in the Client
+
+* `npm test` -> Runs all the unit tests.
+* `npm test:watch` -> Runs all the unit tests interactively and spits out more details about errors.
+* `npm test:coverage` -> Runs all the unit tests and calculates total unit test coverage.
 
 ## App start
 
-* main.jsx/server.js - The entry points for the React application start from these specific files (client/server folders).
+* main.jsx/server.mjs - The entry points for the React application start from these specific files (client/server folders).
 * conn.js – Responsible for creating a connection with MongoDB to access resources in the notes collection and database.
 
 ### Environments

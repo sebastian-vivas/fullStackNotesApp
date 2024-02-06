@@ -55,7 +55,7 @@ const Notes = () => {
         "Content-Type": "application/json",
       },
     });
-    navigate("/");
+    window.location.reload();
   };
 
   const setOrRemovePin = async (e, id) => {
@@ -83,7 +83,7 @@ const Notes = () => {
         "Content-Type": "application/json",
       },
     });
-    navigate("/");
+    window.location.reload();
   };
 
   const showNotes = (note) => {

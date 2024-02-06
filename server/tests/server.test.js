@@ -1,14 +1,15 @@
-import { expect } from 'chai';
+import request from 'supertest';
 import app from '../server.mjs';
-import supertest from 'supertest';
-import { createServer } from 'http';
+import { expect } from 'chai';
 
-const request = supertest(createServer(app));
+describe('Server Tests', () => {
+  it('should connect to MongoDB and respond with 200 on /note endpoint', async () => {
+    const response = await request(app).get('/note');
+    expect(response.status).to.equal(200);
+  });
 
-describe('App', () => {
-  it('should start the server and return "Server is running on port: 8080"', async () => {
-    const res = await request.get('/');
-    expect(res.status).to.equal(200);
-    expect(res.text).to.equal('Server is running on port: 8080');
+  it('should respond with 404 for an endpoint that doesnt exist', async () => {
+    const response = await request(app).get('/non-existing-endpoint');
+    expect(response.status).to.equal(404);
   });
 });
