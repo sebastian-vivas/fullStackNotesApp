@@ -1,6 +1,6 @@
 # Notes App
 
-## Setting up NodeJS on your system and in the application
+## :watermelon: Setting up NodeJS on your system and in the application :watermelon:
 
 Follow these instructions to setup the NodeJS environment for the Notes App.
 
@@ -10,7 +10,7 @@ Follow these instructions to setup the NodeJS environment for the Notes App.
 4. Open the repository folder directory in the command line and enter `cd server`. Once you are inside the server directory, enter `npm install` to install all of the project dependencies.
 5. To run the node server in the Notes application, inside the server directory enter `node server.mjs`. This will run the server locally on your machine on port 8080 (localhost:8080).
 
-## Setting up React in the application
+## :grapes: Setting up React in the application :grapes:
 
 Follow these instructions in order to setup the React environment for the Notes App.
 
@@ -18,26 +18,26 @@ Follow these instructions in order to setup the React environment for the Notes 
 2. To run the React application, enter `npm run dev`. This will run the application locally on your machine on port 3000 (localhost:3000).
 3. Open a web browser of your choice and enter localhost:3000 to navigate to the application's landing page.
 
-## Running unit tests in the server folder
+## :lemon: Running unit tests in the server folder :lemon:
 
 * `npm test` -> Runs all of the unit tests.
 
-## Running unit tests in the client folder
+## :pineapple: Running unit tests in the client folder :pineapple:
 
 * `npm test` -> Runs all of the unit tests once.
 * `npm test:watch` -> Runs all the unit tests countinuously on save and prints error details.
 * `npm test:coverage` -> Runs all the unit tests and calculates total unit test coverage.
 
-## App start
+## :apple: App start :apple:
 
 * main.jsx/server.mjs - The entry points for the React application start from these specific files (client/server folders).
 * conn.js – Responsible for creating a connection with MongoDB to access resources in the notes collection and database.
 
-### Environments
+### :cherries: Environments :cherries:
 
 * development - local development
 
-## Tools/Libraries
+## :blueberries: Tools/Libraries :blueberries:
 
 * [npm](https://www.npmjs.com/) - JS package management
 * [React](https://reactjs.org/) - Used to build UI
@@ -47,7 +47,7 @@ Follow these instructions in order to setup the React environment for the Notes 
 * [Express](https://expressjs.com/) - Node.js Web Application Framework
 * [MongoDB](https://www.mongodb.com/) - Non-relational Database
 
-## Why are unit tests important? What is test driven development?
+## :mango: Why are unit tests important? What is test driven development? :mango:
 
 Unit testing is vital for software development because it reduces the chances of human error from occuring and makes sure that software is functioning as expected. This saves developers a lot of time and headache. Unit tests sprouted a technique for software development called test driven development which guides development through writing tests. Traditionally TDD is done in these three steps:
 
@@ -57,20 +57,20 @@ Unit testing is vital for software development because it reduces the chances of
 
 There are libraries that allow developers to calculate the total unit test coverage in an application. 80% unit test coverage or more is ideal and effective for maintaining codebases. You can calculate the total coverage in the notes app by running `npm test:coverage`. This will create a new folder call "coverage" with valuable information regarding test coverage in the application.
 
-## Things that aren't worth testing
+## :tangerine: Things that aren't worth testing :tangerine:
 
 * Prop types
 * Inline styles
 * If your test duplicates code from the subject under test then it's not worth testing. That test will be brittle. You  should instead test behavior rather than configuration.
 * Don't test things outside your component's concerns (ex. other components, library code, etc.). An exception would be for integration tests.
 
-### Tutorials & Resources
+### :kiwi_fruit: Tutorials & Resources :kiwi_fruit:
 
 * [Guide - Getting started with Vitest](https://vitest.dev/guide/)
 * [Tutorial - How to write unit tests with Jest](https://dev.to/dstrekelj/how-to-write-unit-tests-in-javascript-with-jest-2e83)
 * [Resources - The Principles of Unit Testing](https://dev.to/one-beyond/the-5-principles-of-unit-testing-1p5f)
 
-## Common errors
+## :strawberry: Common errors :strawberry:
 
 Make sure that you are using a version of Node that is compatible with the dependency versions listed in the package.json(`node -v && npm -v`).
 
