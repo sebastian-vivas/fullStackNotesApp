@@ -18,11 +18,11 @@ Follow these instructions in order to setup the React environment for the Notes 
 2. To run the React application, enter `npm run dev`. This will run the application locally on your machine on port 3000 (localhost:3000).
 3. Open a web browser of your choice and enter localhost:3000 to navigate to the application's landing page.
 
-## Running unit tests in the Server
+## Running unit tests in the server folder
 
 * `npm test` -> Runs all of the unit tests.
 
-## Running unit tests in the Client
+## Running unit tests in the client folder
 
 * `npm test` -> Runs all of the unit tests once.
 * `npm test:watch` -> Runs all the unit tests countinuously on save and prints error details.
@@ -47,7 +47,7 @@ Follow these instructions in order to setup the React environment for the Notes 
 * [Express](https://expressjs.com/) - Node.js Web Application Framework
 * [MongoDB](https://www.mongodb.com/) - Non-relational Database
 
-## Why are unit tests important? What is Test driven development?
+## Why are unit tests important? What is test driven development?
 
 Unit testing is vital for software development because it reduces the chances of human error from occuring and makes sure that software is functioning as expected. This saves developers a lot of time and heacache. Unit tests sprouted a technique for software development called test driven development which guides development through writing tests. Traditionally TDD is done in these three steps:
 
