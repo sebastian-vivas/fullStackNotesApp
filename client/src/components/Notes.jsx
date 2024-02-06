@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 
 const Notes = () => {
-  const navigate = useNavigate();
   const [notes, setNotes] = useState([]);
   const getNotes = async () => {
     const response = await fetch(`http://localhost:8080/note`);
@@ -110,10 +108,14 @@ const Notes = () => {
   return (
     <div>
       {notes.map((note) => (
-        <div key={note._id}>{note.pinned && showNotes(note)}</div>
+        <div class="p-1" key={note._id}>
+          {note.pinned && showNotes(note)}
+        </div>
       ))}
       {notes.map((note) => (
-        <div key={note._id}>{!note.pinned && showNotes(note)}</div>
+        <div class="p-1" key={note._id}>
+          {!note.pinned && showNotes(note)}
+        </div>
       ))}
     </div>
   );
