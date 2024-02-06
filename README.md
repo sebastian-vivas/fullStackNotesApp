@@ -2,30 +2,35 @@
 
 ## Setting up NodeJS on your system and in the application
 
-Follow these instructions in order to setup the NodeJS environment for the Notes App.
+Follow these instructions to setup the NodeJS environment for the Notes App.
 
-1. You'll want to install Node on your system. You can download Node [here](https://nodejs.org/en). It is recommended to download the LTS version because it is the most stable version across many different node packages.
-2. Next, you'll want to install NPM. Simply open your terminal and enter `npm install -g npm` to install npm globally on your machine. You can learn more about NPM [here](https://docs.npmjs.com/about-npm).
-3. Run `node --version` or `node -v` and `npm --version` or `npm -v` in your console to make sure that NodeJS and NPM have been properly installed on your system. You should see the same version number in your console that was listed on the LTS download button.
-4. Lastly, open the repository folder directory in the terminal and enter `cd server`. Once you are inside the server directory, enter `npm install` or `npm i` to install all of the project dependencies.
-5. To run the node server in this application, inside the server directory in  the terminal, enter `node server.js`. This will run the server locally on your machine on port 8080 (localhost:8080).
+1. First install Node on your computer. You can download Node [here](https://nodejs.org/en). It is recommended to download the LTS version because it is the most stable version across various node packages.
+2. Next install NPM. Open your terminal and enter `npm install -g npm` to install npm globally on your machine. You can learn more about NPM [here](https://docs.npmjs.com/about-npm).
+3. Run `node --version && npm --version` in git to make sure that NodeJS and NPM have been properly installed on your computer.
+4. Open the repository folder directory in git and enter `cd server`. Once you are inside the server directory, enter `npm install` to install all of the project dependencies.
+5. To run the node server in the Notes application, inside the server directory enter `node server.mjs`. This will run the server locally on your machine on port 8080 (localhost:8080).
 
 ## Setting up React in the application
 
 Follow these instructions in order to setup the React environment for the Notes App.
 
-1. First, open the repository folder directory in the terminal and enter `cd client`. Once you are inside the client directory, enter `npm install` or `npm i` to install all of the project dependencies.
-2. To run the React application, inside the client directory in the terminal, enter `npm run dev`. This will run the application locally on your machine on port 3000 (localhost:3000).
-3. Finally, open a web browser of your choice and enter localhost:3000 to navigate to the application's landing page.
+1. First, open the repository folder directory in the terminal and enter `cd client`. Once you are inside the client directory, enter `npm install` to install all of the project dependencies.
+2. To run the React application, enter `npm run dev`. This will run the application locally on your machine on port 3000 (localhost:3000).
+3. Open a web browser of your choice and enter localhost:3000 to navigate to the application's landing page.
 
-## Running tests
+## Running unit tests in the Server
 
-* `npm test` -> Runs all the unit tests.
-* `npm test:verbose:watch` -> Runs all the unit tests interactively and spits out more details about errors.
+* `npm test` -> Runs all of the unit tests.
+
+## Running unit tests in the Client
+
+* `npm test` -> Runs all of the unit tests once.
+* `npm test:watch` -> Runs all the unit tests countinuously on save and prints error details.
+* `npm test:coverage` -> Runs all the unit tests and calculates total unit test coverage.
 
 ## App start
 
-* main.jsx/server.js - The entry points for the React application start from these specific files (client/server folders).
+* main.jsx/server.mjs - The entry points for the React application start from these specific files (client/server folders).
 * conn.js – Responsible for creating a connection with MongoDB to access resources in the notes collection and database.
 
 ### Environments
@@ -38,38 +43,32 @@ Follow these instructions in order to setup the React environment for the Notes 
 * [React](https://reactjs.org/) - Used to build UI
 * [Built-in React Hooks](https://react.dev/reference/react/hooks) - State/Navigation management
 * [Jest](https://jestjs.io/) - JavaScript Testing Framework
+* [Vitest](https://vitest.dev/) - React Testing Framework that is Jest Compatible
 * [Express](https://expressjs.com/) - Node.js Web Application Framework
 * [MongoDB](https://www.mongodb.com/) - Non-relational Database
 
-## Core Principles of Unit Testing
+## Why are unit tests important? What is Test driven development?
 
-* Lean and accurate testing
-* Test the behaviour, not the implementation
-* Test naming and structuring
-* Deterministic and isolated tests
-* Property-based testing and realistic data
+Unit testing is vital for software development because it reduces the chances of human error from occuring and makes sure that software is functioning as expected. This saves developers a lot of time and heacache. Unit tests sprouted a technique for software development called test driven development which guides development through writing tests. Traditionally TDD is done in these three steps:
 
-[Read more](https://dev.to/one-beyond/the-5-principles-of-unit-testing-1p5f)
+1. Write a test for the functionality you want to add to your application.
+2. Write the functional code until the test passes.
+3. Refactor both the new and old code to make it well structured.
 
-## Questions to Consider when Writing Unit Tests
+There are libraries that allow developers to calculate the total unit test coverage in an application. 80% unit test coverage or more is ideal and effective for maintaining codebases. You can calculate the total coverage in the notes app by running `npm test:coverage`. This will create a new folder call "coverage" with valuable information regarding test coverage in the application.
 
-* What do I do with the props I receive?
-* What components do I render? What do I pass to those components?
-* Do I ever keep anything in React state? If so, do I invalidate it when receiving new props? When do I update state?
-* If a user interacts with me or a child component calls a callback I passed to it, what do I do?
-
-## Not Worth Testing
+## Things that aren't worth testing
 
 * Prop types
 * Inline styles
-* If your test duplicates code from the subject under test then it's not worth testing. That test will be brittle (you should instead test behavior rather than configuration).
+* If your test duplicates code from the subject under test then it's not worth testing. That test will be brittle. You  should instead test behavior rather than configuration.
 * Don't test things outside your component's concerns (ex. other components, library code, etc.). An exception would be for integration tests.
 
 ### Tutorials & Resources
 
-* [FreeCodeCamp - Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
-* [Full Stack open - Building Full-stack Applications with React and Node in ES6](https://fullstackopen.com/en/#course-contents)
-* [Tutorial - How to write unit tests in JS with Jest](https://dev.to/dstrekelj/how-to-write-unit-tests-in-javascript-with-jest-2e83)
+* [Guide - Getting started with Vitest](https://vitest.dev/guide/)
+* [Tutorial - How to write unit tests with Jest](https://dev.to/dstrekelj/how-to-write-unit-tests-in-javascript-with-jest-2e83)
+* [Resources - The Principles of Software Engineering](https://dev.to/one-beyond/the-5-principles-of-unit-testing-1p5f)
 
 ## Common errors
 

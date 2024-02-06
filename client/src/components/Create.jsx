@@ -31,7 +31,7 @@ const Create = () => {
   };
 
   return (
-    <div>
+    <div class="px-3 pt-2">
       <h3>Create New Note</h3>
       <form onSubmit={createNote}>
         <div>
