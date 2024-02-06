@@ -5,16 +5,16 @@
 Follow these instructions to setup the NodeJS environment for the Notes App.
 
 1. First install Node on your computer. You can download Node [here](https://nodejs.org/en). It is recommended to download the LTS version because it is the most stable version across various node packages.
-2. Next install NPM. Open your terminal and enter `npm install -g npm` to install npm globally on your machine. You can learn more about NPM [here](https://docs.npmjs.com/about-npm).
-3. Run `node --version && npm --version` in git to make sure that NodeJS and NPM have been properly installed on your computer.
-4. Open the repository folder directory in git and enter `cd server`. Once you are inside the server directory, enter `npm install` to install all of the project dependencies.
+2. Next install NPM. Open the command line and enter `npm install -g npm` to install npm globally on your machine. You can learn more about NPM [here](https://docs.npmjs.com/about-npm).
+3. Run `node --version && npm --version` in the command line to make sure that NodeJS and NPM have been properly installed on your computer.
+4. Open the repository folder directory in the command line and enter `cd server`. Once you are inside the server directory, enter `npm install` to install all of the project dependencies.
 5. To run the node server in the Notes application, inside the server directory enter `node server.mjs`. This will run the server locally on your machine on port 8080 (localhost:8080).
 
 ## Setting up React in the application
 
 Follow these instructions in order to setup the React environment for the Notes App.
 
-1. First, open the repository folder directory in the terminal and enter `cd client`. Once you are inside the client directory, enter `npm install` to install all of the project dependencies.
+1. First, open the repository folder directory in the the command line and enter `cd client`. Once you are inside the client directory, enter `npm install` to install all of the project dependencies.
 2. To run the React application, enter `npm run dev`. This will run the application locally on your machine on port 3000 (localhost:3000).
 3. Open a web browser of your choice and enter localhost:3000 to navigate to the application's landing page.
 
