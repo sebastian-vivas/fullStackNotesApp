@@ -49,7 +49,7 @@ Follow these instructions in order to setup the React environment for the Notes 
 
 ## Why are unit tests important? What is test driven development?
 
-Unit testing is vital for software development because it reduces the chances of human error from occuring and makes sure that software is functioning as expected. This saves developers a lot of time and heacache. Unit tests sprouted a technique for software development called test driven development which guides development through writing tests. Traditionally TDD is done in these three steps:
+Unit testing is vital for software development because it reduces the chances of human error from occuring and makes sure that software is functioning as expected. This saves developers a lot of time and headache. Unit tests sprouted a technique for software development called test driven development which guides development through writing tests. Traditionally TDD is done in these three steps:
 
 1. Write a test for the functionality you want to add to your application.
 2. Write the functional code until the test passes.
