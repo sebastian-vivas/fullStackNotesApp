@@ -33,11 +33,11 @@ Follow these instructions in order to setup the React environment for the Notes 
 * main.jsx/server.mjs - The entry points for the React application start from these specific files (client/server folders).
 * conn.js – Responsible for creating a connection with MongoDB to access resources in the notes collection and database.
 
-### :cherries: Environments :cherries:
+### :blueberries: Environments  :blueberries:
 
 * development - local development
 
-## :blueberries: Tools/Libraries :blueberries:
+## :cherries: Tools/Libraries :cherries: 
 
 * [npm](https://www.npmjs.com/) - JS package management
 * [React](https://reactjs.org/) - Used to build UI
