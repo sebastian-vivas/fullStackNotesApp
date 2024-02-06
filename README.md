@@ -68,7 +68,7 @@ There are libraries that allow developers to calculate the total unit test cover
 
 * [Guide - Getting started with Vitest](https://vitest.dev/guide/)
 * [Tutorial - How to write unit tests with Jest](https://dev.to/dstrekelj/how-to-write-unit-tests-in-javascript-with-jest-2e83)
-* [Resources - The Principles of Software Engineering](https://dev.to/one-beyond/the-5-principles-of-unit-testing-1p5f)
+* [Resources - The Principles of Unit Testing](https://dev.to/one-beyond/the-5-principles-of-unit-testing-1p5f)
 
 ## Common errors
 
